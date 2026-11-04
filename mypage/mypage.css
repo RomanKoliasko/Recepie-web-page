@@ -1,0 +1,590 @@
+:root{
+    --width-full: 100%;
+    --width-12col: 1200px;
+
+    /*Grid Settings*/
+    --grid-gap: 10px;
+    --padding-default: 20px;
+    
+    /* colors */
+    --background-color-navigation: #00000088;
+    --background-color-light: #ededed;
+    --background-color-dark: #111111;
+    --primary-color: #bf5b23;
+    --color-light: #ededed;
+    --color-dark: #373737;
+    --color-white: #ffffff;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+     box-sizing: border-box;
+}   
+
+
+
+body{
+    width: var(--width-full);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-dark);
+    position: relative;
+}
+
+
+
+
+
+.navigation{
+    width: var(--width-full);
+    height: 80px;
+    background-color: var(--background-color-navigation);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+}
+
+.navigation.fixed{
+    position: fixed;
+    top: 0;
+
+}
+
+.menu-container{
+    width: var(--width-12col);
+}
+
+
+.menu-container ul{
+    display: flex;
+
+
+}
+
+
+.menu-container ul li {
+    list-style: none;
+}
+
+
+.menu-container a{
+    color: var(--background-color-light);
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid var(--background-color-light);
+    font-size: 15px;
+}
+
+.menu-container li:last-child a {
+    border: none;
+
+}
+
+.menu-container a:hover{
+    color: var(--primary-color);
+}
+
+.container {
+    width: var(--width-12col);
+    margin: 0 auto;
+}
+
+
+/* IMAGE */
+
+.image {
+    width: 100%;
+    background-image: url(https://img.magnific.com/premium-photo/traditional-russian-borsch-with-sour-cream-rye-breadcrumbs-green-onions-wooden-bowl-top-view-traditional-russian-cuisine-concept_79830-2961.jpg?semt=ais_hybrid&w=740&q=80);
+       background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+
+
+
+
+/* RECIPE */
+
+.recipe {
+    padding: 50px 65px;
+    color: var(--color-light);
+}
+
+
+.intro h1 {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+.intro p {
+    font-size: 14px;
+    max-width: 850px;
+}
+
+
+.line {
+    border-bottom: 1px solid #aaaaaa;
+    margin: 35px 0;
+}
+
+
+/* PREPARATION */
+
+.preparation {
+    margin-bottom: 70px;
+}
+
+
+.recipe h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.preparation p {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+
+/* INGREDIENTS */
+
+.ingredients_area {
+    display: grid;
+    grid-template-columns: 7fr 1px 3fr;
+    gap: 40px;
+}
+
+
+.ingredients_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+.ingredients_area p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+.vertical_line {
+    border-left: 1px solid #aaaaaa;
+}
+
+
+/* INSTRUCTIONS */
+
+.instructions {
+    padding: 25px 0;
+}
+
+
+.step {
+    margin-bottom: 30px;
+}
+
+
+.step h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+
+.step p {
+    font-size: 13px;
+}
+
+
+/* BOTTOM */
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 60px;
+}
+
+
+/* NUTRITION */
+
+.nutrition {
+    width: 420px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+.nutrition_title {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+
+.nutrition_title h2 {
+    margin: 0 0 5px;
+}
+
+
+.nutrition_title p {
+    font-size: 12px;
+}
+
+
+.nutrition_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 5px;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 13px;
+}
+
+
+/* CHEF TIPS */
+
+.chef_tips {
+    width: 420px;
+    padding: 25px;
+    border: 1px solid #d2c73c;
+    border-radius: 30px;
+}
+
+
+.chef_tips h2 {
+    color: #e3d83d;
+    margin-bottom: 30px;
+}
+
+
+.chef_tips p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+/* Footer start */
+.footer {
+    width: var(--width-full);
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    color: var(--color-white);
+    margin-top: 100px;
+    
+}
+
+.footer-container {
+    width: var(--width-12col);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    align-items: center;
+    
+}
+
+.footer-col-socials {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 65px;
+}
+
+.words{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.words p:hover{
+    color: var(--background-color-dark);
+  
+}
+
+.footer-divider {
+    grid-column: span 1;
+    border-left: 1px solid;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.footer-col-right {
+   grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-right:65px;
+}
+
+
+
+.footer-spotify-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+
+
+}
+
+.footer-spotify-links a {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.footer-etsy {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    text-align: right;
+}
+.footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.footer a:hover {
+    color: var(--background-color-dark);
+}
+
+/* Фікс розміру іконок у футері */
+.footer svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0; /* Запобігає сплющенню іконки */
+}
+
+.footer-col-socials a,
+.footer-etsy {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між іконкою та текстом */
+}
+
+
+
+/* MOBILE */
+
+@media (width <= 768px) {
+
+    :root {
+        --width-12col: 100%;
+    }    
+
+
+    body {
+        overflow-x: hidden;
+    }    
+
+
+    /* IMAGE */
+
+    .image {
+        width: 100vw;
+        height: 350px;
+        margin-left: calc(50% - 50vw);
+    }    
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }    
+
+
+    /* RECIPE */
+
+    .recipe {
+        padding: 35px 20px;
+    }    
+
+
+    /* INTRO */
+
+    .intro h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }    
+
+    .intro p {
+        font-size: 13px;
+        line-height: 1.5;
+    }    
+
+
+    /* PREPARATION */
+
+    .preparation {
+        margin-bottom: 45px;
+    }    
+
+    .recipe h2 {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }    
+
+    .preparation p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }    
+
+
+    /* INGREDIENTS */
+
+    .ingredients_area {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }    
+
+    .ingredients_columns {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }    
+
+    .vertical_line {
+        display: none;
+    }    
+
+    .ingredients_area p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }    
+
+
+    /* SPICES */
+
+    .spices {
+        margin-top: 10px;
+    }    
+
+
+    /* INSTRUCTIONS */
+
+    .instructions {
+        padding: 10px 0;
+    }    
+
+    .step {
+        margin-bottom: 30px;
+    }    
+
+    .step h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }    
+
+    .step p {
+        font-size: 13px;
+        line-height: 1.5;
+    }    
+
+
+    /* BOTTOM */
+
+    .bottom {
+        flex-direction: column;
+        gap: 35px;
+        padding-bottom: 30px;
+    }    
+
+
+    /* NUTRITION */
+
+    .nutrition {
+        width: 100%;
+        border-radius: 20px;
+    }    
+
+    .nutrition_row {
+        padding: 13px 5px;
+    }    
+
+
+    /* CHEF TIPS */
+
+    .chef_tips {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }    
+
+    .chef_tips p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }    
+
+
+
+    /* FOOTER */
+
+    .footer {
+        margin-top: 60px;
+        padding: 35px 20px;
+    }
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-col-socials {
+        margin-left: 0;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        border-left: none;
+        border-top: 1px solid;
+        margin: 0;
+    }
+
+    .footer-col-right {
+        width: 100%;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+    .footer-spotify-links a {
+        font-size: 11px;
+        word-break: break-all;
+    }
+
+
+
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

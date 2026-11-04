@@ -1,0 +1,331 @@
+:root {
+    --width-full: 100%;
+    --width-12col: 1200px;
+    --grid-gap: 10px;
+    --padding-default: 20px;
+
+    --background-color-navigation: #00000088;
+    --background-color-light: #ededed;
+    --background-color-dark: #111111;
+    --primary-color: #bf5b23;
+    --color-light: #ededed;
+    --color-dark: #373737;
+    --color-white: #ffffff;
+
+    --category-seafood: #3e30e2;
+    --category-chicken: #299c6e;
+}
+
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: var(--width-full);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-dark);
+    color: var(--color-light);
+    font-size: 12px;
+}
+
+.container {
+    width: var(--width-full);
+}
+
+/* Navbar */
+.navigation {
+    width: var(--width-full);
+    min-height: 60px;
+    background-color: var(--background-color-navigation);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.menu-container {
+    width: var(--width-12col);
+}
+
+.menu-container ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-container a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid var(--color-light);
+    font-size: 15px;
+}
+
+.menu-container li:last-child a {
+    border: none;
+}
+
+.menu-container a:hover {
+    color: var(--primary-color);
+}
+
+/* Search and filters */
+main {
+    max-width: var(--width-12col);
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.search-section {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 10%;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #303030;
+}
+
+.search-box h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 18px 0 10px;
+}
+
+.search-input-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 280px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.search-input-box span {
+    font-size: 20px;
+}
+
+.search-input-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-light);
+    font-family: inherit;
+}
+
+.search-input-box input::placeholder {
+    color: var(--color-light);
+}
+
+.search-box > p {
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+/* Category filter box */
+.filters {
+    background: linear-gradient(to right, #222, #111);
+    padding: 18px 14px;
+    border-radius: 4px;
+}
+
+.filters h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.categories label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+/* Custom radio buttons */
+.categories input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border: 1.5px solid #ededed;
+    border-radius: 50%;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+/* Orange circle with a small white center */
+.categories input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.categories input:checked::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Search results */
+.results {
+    max-width: 900px;
+    margin: 25px auto 0;
+}
+
+.result {
+    padding: 14px 0 30px;
+    border-bottom: 1px solid #303030;
+}
+
+.result:last-child {
+    border-bottom: none;
+}
+
+.result .category {
+    border-left: 2px solid;
+    padding-left: 6px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Category colors */
+.result [data-category="seafood"],
+.result[data-category="seafood"] {
+    color: var(--category-seafood);
+}
+
+.category[data-category="seafood"] {
+    border-color: var(--category-seafood);
+}
+
+.category[data-category="chicken"] {
+    border-color: var(--category-chicken);
+}
+
+.category[data-category="chicken"] span {
+    color: var(--category-chicken);
+}
+
+.category[data-category="seafood"] span {
+    color: var(--category-seafood);
+}
+
+.result h3 {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.result > p:last-child {
+    line-height: 1.4;
+}
+
+/* Footer start */
+.footer {
+    width: var(--width-full);
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    color: var(--color-white);
+    margin-top: 100px;
+    
+}
+
+.footer-container {
+    width: var(--width-12col);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    align-items: center;
+    
+}
+
+.footer-col-socials {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 65px;
+}
+
+.footer-col-links {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 30px;
+}   
+
+.footer-divider {
+    grid-column: span 1;
+    border-left: 1px solid;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.footer-col-right {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 80px;
+}
+
+
+
+.footer-spotify-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-spotify-links a {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.footer-etsy {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.footer a:hover {
+    color: var(--background-color-dark);
+}
+
+/* Фікс розміру іконок у футері */
+.footer svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0; /* Запобігає сплющенню іконки */
+}
+
+.footer-col-socials a,
+.footer-etsy {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між іконкою та текстом */
+}
