@@ -264,13 +264,18 @@ main {
     margin-left: 65px;
 }
 
-.footer-col-links {
-    grid-column: span 2;
+.words{
+    width: 10%;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-left: 30px;
-}   
+    cursor: pointer;
+}
+
+.words p:hover{
+    color: var(--background-color-dark);
+  
+}
 
 .footer-divider {
     grid-column: span 1;
@@ -280,11 +285,11 @@ main {
 }
 
 .footer-col-right {
-    grid-column: span 6;
+   grid-column: span 7;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-left: 80px;
+    gap: 12px;
+    margin-right:65px;
 }
 
 
@@ -293,6 +298,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: flex-end;
+
+
 }
 
 .footer-spotify-links a {
@@ -304,7 +312,9 @@ main {
     font-size: 12px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 8px;
+    text-align: right;
 }
 .footer a {
     color: var(--color-white);
