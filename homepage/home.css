@@ -1048,6 +1048,7 @@ body{
         background-color: transparent;
         z-index: 2;
         justify-content: center;
+        color: var(--color-light);
     }
 
     .kitchen-text-box h3 {
@@ -1056,6 +1057,7 @@ body{
 
     .kitchen-text-box p {
         font-size: 15px;
+        color: var(--color-light);
     }
 
 
